@@ -1,0 +1,4 @@
+Este proyecto fue realizado con la herramienta NetBeans IDE 8.1 y el servidor Glassfish
+La base de dato Utilizada fue SQL Server 2012 
+En esta misma carpeta pueden encontrar ScreenShot del programa en ejecución
+
