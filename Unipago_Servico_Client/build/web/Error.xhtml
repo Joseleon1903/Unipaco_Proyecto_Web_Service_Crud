@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./Templete.xhtml">
+
+            <ui:define name="top">
+              <h1>Unipago Crud Page Error</h1>
+            </ui:define>
+
+            <ui:define name="left">
+                  <h1>----Menu---</h1>
+                <ul>
+                     <li><h:link value="Inicio" outcome="index"/></li>
+                    <li><h:link value="Agregar Nuevo Ciudadano" outcome="AgregarView"/></li>
+                    <li> <h:link value="Lista Ciudadanos" outcome="ListaCiudadanoView"/></li>
+                    <li> <h:link value="Buscar Ciudadanos" outcome="BuscarCiudadanoView"/></li>
+                </ul>
+               
+            </ui:define>
+
+            <ui:define name="content">
+                <h1>Atencion Error volver a la pagina principal</h1>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

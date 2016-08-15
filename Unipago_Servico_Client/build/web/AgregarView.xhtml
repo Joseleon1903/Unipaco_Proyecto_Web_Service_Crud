@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="/Templete.xhtml">
+
+               <ui:define name="top">
+                <h1>Unipago Crud Agregar Nuevo Ciudadano</h1>
+            </ui:define>
+
+            <ui:define name="left">
+                <h1>----Menu---</h1>
+                <ul>
+                     <li><h:link value="Inicio" outcome="index"/></li>
+                    <li><h:link value="Agregar Nuevo Ciudadano" outcome="AgregarView"/></li>
+                    <li> <h:link value="Lista Ciudadanos" outcome="ListaCiudadanoView"/></li>
+                    <li> <h:link value="Buscar Ciudadanos" outcome="BuscarCiudadanoView"/></li>
+                </ul>
+            </ui:define>
+
+            <ui:define name="content">
+               
+                <h:form>
+                    <h:panelGrid columns="3">
+                        <h:outputLabel value="Nombre" for="Nombre"></h:outputLabel>
+                        <h:inputText id="Nombre" label="nombre" required="true" value="#{EntityCiudadano.nombre}"/>
+                        <h:message for="Nombre"/>
+                        <h:outputLabel value="Apellido" for="Apellido"></h:outputLabel>
+                        <h:inputText id="Apellido" label="apellido" required="true" value="#{EntityCiudadano.apellido}"/>
+                        <h:message for="Apellido"/>
+                        <h:outputLabel value="Sexo" for="Sexo"/>
+                        <h:selectOneRadio value="#{EntityCiudadano.sexo}" required="true">
+                            <f:selectItem itemValue="M" itemLabel="Masculino" />
+                            <f:selectItem itemValue="F" itemLabel="Femenino"/>
+                        </h:selectOneRadio>
+                        <h:message for="Sexo"/>
+                        <h:outputLabel value="Fecha Nacimiento" for="Date"></h:outputLabel>
+                        <h:inputText id="Date" label="Fecha" required="true" value="#{EntityCiudadano.fecha}"/>
+                        <h:message for="Date"/>
+                         <h:outputLabel value="Direccion" for="Direccion"></h:outputLabel>
+                         <h:inputText id="Direccion" label="Direccion" required="true" value="#{EntityCiudadano.direccion}"/>
+                        <h:message for="Direccion"/>
+                         <h:outputLabel value="Correo Electronico" for="Correo"></h:outputLabel>
+                         <h:inputText id="Correo" label="Correo" required="true" value="#{EntityCiudadano.correo}"/>
+                        <h:message for="Correo"/>
+                         <h:outputLabel value="Numero Telefonico" for="Telefono"></h:outputLabel>
+                         <h:inputText id="Telefono" label="Telefono" required="true" value="#{EntityCiudadano.telefono}"/>
+                        <h:message for="Telefono"/>
+                        <h:panelGroup/>
+                        <h:commandButton id="Envio" value="Registrar Ciudadano" action="#{controllerBeanCiudadano.requestAgregar(EntityCiudadano)}"/>
+                    </h:panelGrid>
+
+                </h:form>
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

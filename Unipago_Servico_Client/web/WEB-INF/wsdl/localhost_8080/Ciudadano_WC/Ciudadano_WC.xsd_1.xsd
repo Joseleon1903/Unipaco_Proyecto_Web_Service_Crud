@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://Service.Unipago.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://Service.Unipago.com/">
+
+<xs:element name="AddCiudadano" type="tns:AddCiudadano"/>
+
+<xs:element name="AddCiudadanoResponse" type="tns:AddCiudadanoResponse"/>
+
+<xs:element name="BuscarCiudadano" type="tns:BuscarCiudadano"/>
+
+<xs:element name="BuscarCiudadanoResponse" type="tns:BuscarCiudadanoResponse"/>
+
+<xs:element name="DeleteCiudadano" type="tns:DeleteCiudadano"/>
+
+<xs:element name="DeleteCiudadanoResponse" type="tns:DeleteCiudadanoResponse"/>
+
+<xs:element name="ListaCiudadano" type="tns:ListaCiudadano"/>
+
+<xs:element name="ListaCiudadanoResponse" type="tns:ListaCiudadanoResponse"/>
+
+<xs:element name="UpdateCiudadano" type="tns:UpdateCiudadano"/>
+
+<xs:element name="UpdateCiudadanoResponse" type="tns:UpdateCiudadanoResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:complexType name="DeleteCiudadano">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="DeleteCiudadanoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BuscarCiudadano">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BuscarCiudadanoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:entidadCiudadano" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="entidadCiudadano">
+<xs:sequence>
+<xs:element name="apellido" type="xs:string" minOccurs="0"/>
+<xs:element name="correo" type="xs:string" minOccurs="0"/>
+<xs:element name="direccion" type="xs:string" minOccurs="0"/>
+<xs:element name="fecha" type="xs:string" minOccurs="0"/>
+<xs:element name="ID" type="xs:int"/>
+<xs:element name="nombre" type="xs:string" minOccurs="0"/>
+<xs:element name="sexo" type="xs:unsignedShort"/>
+<xs:element name="telefono" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UpdateCiudadano">
+<xs:sequence>
+<xs:element name="arg0" type="tns:entidadCiudadano" minOccurs="0"/>
+<xs:element name="arg1" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="UpdateCiudadanoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AddCiudadano">
+<xs:sequence>
+<xs:element name="arg0" type="tns:entidadCiudadano" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AddCiudadanoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ListaCiudadano">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="ListaCiudadanoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:entidadCiudadano" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
