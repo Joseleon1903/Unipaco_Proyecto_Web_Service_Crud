@@ -5,7 +5,6 @@
  */
 package com.managedbean.jsf2;
 
-import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.bean.ManagedBean;
 

@@ -27,7 +27,7 @@ public interface CiudadanoWC {
 
     /**
      * 
-     * @param arg0
+     * @param entidadCiudadanoAdd
      * @return
      *     returns boolean
      */
@@ -37,13 +37,13 @@ public interface CiudadanoWC {
     @ResponseWrapper(localName = "AddCiudadanoResponse", targetNamespace = "http://Service.Unipago.com/", className = "com.unipago.service.AddCiudadanoResponse")
     @Action(input = "http://Service.Unipago.com/Ciudadano_WC/AddCiudadanoRequest", output = "http://Service.Unipago.com/Ciudadano_WC/AddCiudadanoResponse")
     public boolean addCiudadano(
-        @WebParam(name = "arg0", targetNamespace = "")
-        EntidadCiudadano arg0);
+        @WebParam(name = "EntidadCiudadanoAdd", targetNamespace = "")
+        EntidadCiudadano entidadCiudadanoAdd);
 
     /**
      * 
      * @param arg1
-     * @param arg0
+     * @param entidadCiudadanoUp
      * @return
      *     returns boolean
      */
@@ -53,14 +53,14 @@ public interface CiudadanoWC {
     @ResponseWrapper(localName = "UpdateCiudadanoResponse", targetNamespace = "http://Service.Unipago.com/", className = "com.unipago.service.UpdateCiudadanoResponse")
     @Action(input = "http://Service.Unipago.com/Ciudadano_WC/UpdateCiudadanoRequest", output = "http://Service.Unipago.com/Ciudadano_WC/UpdateCiudadanoResponse")
     public boolean updateCiudadano(
-        @WebParam(name = "arg0", targetNamespace = "")
-        EntidadCiudadano arg0,
+        @WebParam(name = "EntidadCiudadanoUp", targetNamespace = "")
+        EntidadCiudadano entidadCiudadanoUp,
         @WebParam(name = "arg1", targetNamespace = "")
         int arg1);
 
     /**
      * 
-     * @param arg0
+     * @param idCiudadanoDel
      * @return
      *     returns boolean
      */
@@ -70,8 +70,8 @@ public interface CiudadanoWC {
     @ResponseWrapper(localName = "DeleteCiudadanoResponse", targetNamespace = "http://Service.Unipago.com/", className = "com.unipago.service.DeleteCiudadanoResponse")
     @Action(input = "http://Service.Unipago.com/Ciudadano_WC/DeleteCiudadanoRequest", output = "http://Service.Unipago.com/Ciudadano_WC/DeleteCiudadanoResponse")
     public boolean deleteCiudadano(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
+        @WebParam(name = "IDCiudadanoDel", targetNamespace = "")
+        int idCiudadanoDel);
 
     /**
      * 
@@ -87,7 +87,7 @@ public interface CiudadanoWC {
 
     /**
      * 
-     * @param arg0
+     * @param idCiudadanoSrc
      * @return
      *     returns com.unipago.service.EntidadCiudadano
      */
@@ -97,8 +97,8 @@ public interface CiudadanoWC {
     @ResponseWrapper(localName = "BuscarCiudadanoResponse", targetNamespace = "http://Service.Unipago.com/", className = "com.unipago.service.BuscarCiudadanoResponse")
     @Action(input = "http://Service.Unipago.com/Ciudadano_WC/BuscarCiudadanoRequest", output = "http://Service.Unipago.com/Ciudadano_WC/BuscarCiudadanoResponse")
     public EntidadCiudadano buscarCiudadano(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
+        @WebParam(name = "IDCiudadanoSrc", targetNamespace = "")
+        int idCiudadanoSrc);
 
     /**
      * 
@@ -114,5 +114,17 @@ public interface CiudadanoWC {
     public String hello(
         @WebParam(name = "name", targetNamespace = "")
         String name);
+
+    /**
+     * 
+     * @return
+     *     returns com.unipago.service.SessionBeanCiudadano
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getBeanSessionCiudadano", targetNamespace = "http://Service.Unipago.com/", className = "com.unipago.service.GetBeanSessionCiudadano")
+    @ResponseWrapper(localName = "getBeanSessionCiudadanoResponse", targetNamespace = "http://Service.Unipago.com/", className = "com.unipago.service.GetBeanSessionCiudadanoResponse")
+    @Action(input = "http://Service.Unipago.com/Ciudadano_WC/getBeanSessionCiudadanoRequest", output = "http://Service.Unipago.com/Ciudadano_WC/getBeanSessionCiudadanoResponse")
+    public SessionBeanCiudadano getBeanSessionCiudadano();
 
 }

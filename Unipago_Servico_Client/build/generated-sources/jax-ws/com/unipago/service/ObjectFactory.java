@@ -34,6 +34,8 @@ public class ObjectFactory {
     private final static QName _ListaCiudadanoResponse_QNAME = new QName("http://Service.Unipago.com/", "ListaCiudadanoResponse");
     private final static QName _UpdateCiudadano_QNAME = new QName("http://Service.Unipago.com/", "UpdateCiudadano");
     private final static QName _UpdateCiudadanoResponse_QNAME = new QName("http://Service.Unipago.com/", "UpdateCiudadanoResponse");
+    private final static QName _GetBeanSessionCiudadano_QNAME = new QName("http://Service.Unipago.com/", "getBeanSessionCiudadano");
+    private final static QName _GetBeanSessionCiudadanoResponse_QNAME = new QName("http://Service.Unipago.com/", "getBeanSessionCiudadanoResponse");
     private final static QName _Hello_QNAME = new QName("http://Service.Unipago.com/", "hello");
     private final static QName _HelloResponse_QNAME = new QName("http://Service.Unipago.com/", "helloResponse");
 
@@ -125,6 +127,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetBeanSessionCiudadano }
+     * 
+     */
+    public GetBeanSessionCiudadano createGetBeanSessionCiudadano() {
+        return new GetBeanSessionCiudadano();
+    }
+
+    /**
+     * Create an instance of {@link GetBeanSessionCiudadanoResponse }
+     * 
+     */
+    public GetBeanSessionCiudadanoResponse createGetBeanSessionCiudadanoResponse() {
+        return new GetBeanSessionCiudadanoResponse();
+    }
+
+    /**
      * Create an instance of {@link Hello }
      * 
      */
@@ -146,6 +164,14 @@ public class ObjectFactory {
      */
     public EntidadCiudadano createEntidadCiudadano() {
         return new EntidadCiudadano();
+    }
+
+    /**
+     * Create an instance of {@link SessionBeanCiudadano }
+     * 
+     */
+    public SessionBeanCiudadano createSessionBeanCiudadano() {
+        return new SessionBeanCiudadano();
     }
 
     /**
@@ -236,6 +262,24 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://Service.Unipago.com/", name = "UpdateCiudadanoResponse")
     public JAXBElement<UpdateCiudadanoResponse> createUpdateCiudadanoResponse(UpdateCiudadanoResponse value) {
         return new JAXBElement<UpdateCiudadanoResponse>(_UpdateCiudadanoResponse_QNAME, UpdateCiudadanoResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetBeanSessionCiudadano }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Service.Unipago.com/", name = "getBeanSessionCiudadano")
+    public JAXBElement<GetBeanSessionCiudadano> createGetBeanSessionCiudadano(GetBeanSessionCiudadano value) {
+        return new JAXBElement<GetBeanSessionCiudadano>(_GetBeanSessionCiudadano_QNAME, GetBeanSessionCiudadano.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetBeanSessionCiudadanoResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://Service.Unipago.com/", name = "getBeanSessionCiudadanoResponse")
+    public JAXBElement<GetBeanSessionCiudadanoResponse> createGetBeanSessionCiudadanoResponse(GetBeanSessionCiudadanoResponse value) {
+        return new JAXBElement<GetBeanSessionCiudadanoResponse>(_GetBeanSessionCiudadanoResponse_QNAME, GetBeanSessionCiudadanoResponse.class, null, value);
     }
 
     /**

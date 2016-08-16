@@ -8,16 +8,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for AddCiudadano complex type.
+ * <p>Java class for getBeanSessionCiudadanoResponse complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="AddCiudadano"&gt;
+ * &lt;complexType name="getBeanSessionCiudadanoResponse"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="EntidadCiudadanoAdd" type="{http://Service.Unipago.com/}entidadCiudadano" minOccurs="0"/&gt;
+ *         &lt;element name="return" type="{http://Service.Unipago.com/}sessionBeanCiudadano" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -27,36 +27,36 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "AddCiudadano", propOrder = {
-    "entidadCiudadanoAdd"
+@XmlType(name = "getBeanSessionCiudadanoResponse", propOrder = {
+    "_return"
 })
-public class AddCiudadano {
+public class GetBeanSessionCiudadanoResponse {
 
-    @XmlElement(name = "EntidadCiudadanoAdd")
-    protected EntidadCiudadano entidadCiudadanoAdd;
+    @XmlElement(name = "return")
+    protected SessionBeanCiudadano _return;
 
     /**
-     * Gets the value of the entidadCiudadanoAdd property.
+     * Gets the value of the return property.
      * 
      * @return
      *     possible object is
-     *     {@link EntidadCiudadano }
+     *     {@link SessionBeanCiudadano }
      *     
      */
-    public EntidadCiudadano getEntidadCiudadanoAdd() {
-        return entidadCiudadanoAdd;
+    public SessionBeanCiudadano getReturn() {
+        return _return;
     }
 
     /**
-     * Sets the value of the entidadCiudadanoAdd property.
+     * Sets the value of the return property.
      * 
      * @param value
      *     allowed object is
-     *     {@link EntidadCiudadano }
+     *     {@link SessionBeanCiudadano }
      *     
      */
-    public void setEntidadCiudadanoAdd(EntidadCiudadano value) {
-        this.entidadCiudadanoAdd = value;
+    public void setReturn(SessionBeanCiudadano value) {
+        this._return = value;
     }
 
 }

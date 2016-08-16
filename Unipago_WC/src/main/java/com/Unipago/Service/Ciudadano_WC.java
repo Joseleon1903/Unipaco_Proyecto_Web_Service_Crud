@@ -1,4 +1,3 @@
-
 package com.Unipago.Service;
 
 import Entity.EntidadCiudadano;
@@ -14,7 +13,6 @@ import javax.ejb.Stateless;
 public class Ciudadano_WC {
 
     private SessionBeanCiudadano beanCiudadano = new SessionBeanCiudadano();
-    
 
     @WebMethod(operationName = "hello")
     public String hello(@WebParam(name = "name") String txt) {
@@ -22,26 +20,32 @@ public class Ciudadano_WC {
     }
 
     @WebMethod
-    public boolean AddCiudadano(EntidadCiudadano ciudadano) {
+    public SessionBeanCiudadano getBeanSessionCiudadano() {
+        return beanCiudadano;
+    }
+
+    @WebMethod
+    public boolean AddCiudadano(@WebParam(name = "EntidadCiudadanoAdd")EntidadCiudadano ciudadano) {
         return beanCiudadano.AddCiudadano(ciudadano);
     }
-    
-     @WebMethod
-    public boolean UpdateCiudadano(EntidadCiudadano ciudadano, int ID) {
+
+    @WebMethod
+    public boolean UpdateCiudadano(@WebParam(name = "EntidadCiudadanoUp")EntidadCiudadano ciudadano, int ID) {
         return beanCiudadano.UpdateCiudadano(ciudadano, ID);
     }
-    
-     @WebMethod
-    public boolean DeleteCiudadano(int ID) {
+
+    @WebMethod
+    public boolean DeleteCiudadano(@WebParam(name = "IDCiudadanoDel")int ID) {
         return beanCiudadano.DeleteCiudadano(ID);
     }
-    
-     @WebMethod
+
+    @WebMethod
     public ArrayList<EntidadCiudadano> ListaCiudadano() {
         return beanCiudadano.ListaCiudadanos();
     }
-     @WebMethod
-    public EntidadCiudadano BuscarCiudadano(int ID) {
+
+    @WebMethod
+    public EntidadCiudadano BuscarCiudadano(@WebParam(name = "IDCiudadanoSrc")int ID) {
         return beanCiudadano.BuscarCiudadano(ID);
     }
 

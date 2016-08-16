@@ -20,13 +20,17 @@
 
 <xs:element name="UpdateCiudadanoResponse" type="tns:UpdateCiudadanoResponse"/>
 
+<xs:element name="getBeanSessionCiudadano" type="tns:getBeanSessionCiudadano"/>
+
+<xs:element name="getBeanSessionCiudadanoResponse" type="tns:getBeanSessionCiudadanoResponse"/>
+
 <xs:element name="hello" type="tns:hello"/>
 
 <xs:element name="helloResponse" type="tns:helloResponse"/>
 
 <xs:complexType name="DeleteCiudadano">
 <xs:sequence>
-<xs:element name="arg0" type="xs:int"/>
+<xs:element name="IDCiudadanoDel" type="xs:int"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -38,7 +42,7 @@
 
 <xs:complexType name="BuscarCiudadano">
 <xs:sequence>
-<xs:element name="arg0" type="xs:int"/>
+<xs:element name="IDCiudadanoSrc" type="xs:int"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -63,7 +67,7 @@
 
 <xs:complexType name="UpdateCiudadano">
 <xs:sequence>
-<xs:element name="arg0" type="tns:entidadCiudadano" minOccurs="0"/>
+<xs:element name="EntidadCiudadanoUp" type="tns:entidadCiudadano" minOccurs="0"/>
 <xs:element name="arg1" type="xs:int"/>
 </xs:sequence>
 </xs:complexType>
@@ -76,7 +80,7 @@
 
 <xs:complexType name="AddCiudadano">
 <xs:sequence>
-<xs:element name="arg0" type="tns:entidadCiudadano" minOccurs="0"/>
+<xs:element name="EntidadCiudadanoAdd" type="tns:entidadCiudadano" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -106,5 +110,19 @@
 <xs:sequence>
 <xs:element name="return" type="tns:entidadCiudadano" minOccurs="0" maxOccurs="unbounded"/>
 </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getBeanSessionCiudadano">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getBeanSessionCiudadanoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sessionBeanCiudadano" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sessionBeanCiudadano">
+<xs:sequence/>
 </xs:complexType>
 </xs:schema>
